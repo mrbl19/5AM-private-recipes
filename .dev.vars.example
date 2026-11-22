@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local development (never commit .dev.vars).
+EMAIL_API_KEY="re_your_resend_api_key"
+SIGNING_SECRET="paste_output_of_openssl_rand_hex_32"
+ADMIN_KEY="paste_another_output_of_openssl_rand_hex_32"

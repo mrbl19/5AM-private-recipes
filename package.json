@@ -1,0 +1,17 @@
+{
+  "name": "fiveam-recipes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Whitelist-gated recipe access system for 5AM Bakery",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create fiveam-recipes",
+    "db:init": "wrangler d1 execute fiveam-recipes --remote --file=schema.sql",
+    "db:init:local": "wrangler d1 execute fiveam-recipes --local --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fiveam-recipes",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-01",
+  "observability": {
+    "enabled": true
+  },
+
+  // 1) Run:  npx wrangler d1 create fiveam-recipes
+  // 2) Paste the database_id it prints into the value below.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fiveam-recipes",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+    }
+  ],
+
+  // Non-secret configuration. Secrets are set with `wrangler secret put`.
+  "vars": {
+    "FROM_EMAIL": "5AM Bakery <recipes@yourdomain.com>",
+    "OWNER_EMAIL": "you@yourdomain.com",
+    "ALLOWED_ORIGIN": "*",
+    "TOKEN_TTL_DAYS": "7"
+  }
+}
